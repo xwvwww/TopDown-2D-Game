@@ -15,14 +15,13 @@ public class InputHandler : MonoBehaviour
         if (Instance == null)
             Instance = this;
 
-        if (_playerInput == null)
+        if(_playerInput == null)
             _playerInput = new PlayerInput();
-
+        
         DontDestroyOnLoad(this);
 
         _playerInput.Player.Move.performed += OnMove;
         _playerInput.Player.Move.canceled += OnMove;
-
     }
 
     private void OnMove(InputAction.CallbackContext context)

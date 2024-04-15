@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f443b937054c48b4aa45779e05d690c9
+guid: 00072940c13f38241808d99ea328d8c8
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -130,7 +130,7 @@ ScriptedImporter:
       y: 77
       width: 64
       height: 64
-    spriteID: 82d28075d82769544936a68b3e30d19a
+    spriteID: be0b3ad2cc1453e469c715cc8a8ae849
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -150,7 +150,7 @@ ScriptedImporter:
       y: 4
       width: 64
       height: 65
-    spriteID: 899254d51437eb04eb1bdc6a1c29a16c
+    spriteID: 377c17dee9fde554aa4191364770640b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -170,7 +170,7 @@ ScriptedImporter:
       y: 149
       width: 64
       height: 64
-    spriteID: 5598fb9924f97954fad8ccd4eb5543ae
+    spriteID: 97df1298e4bcbe846b468729647dfbe6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -190,7 +190,7 @@ ScriptedImporter:
       y: 221
       width: 64
       height: 64
-    spriteID: 679601b5ecba64646942b41ccc18b50c
+    spriteID: a98555ed313e12c49b603a555d6fc275
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -210,7 +210,7 @@ ScriptedImporter:
       y: 293
       width: 64
       height: 64
-    spriteID: 3a33765618be97b4c9d77e8b7f80f0b1
+    spriteID: cd27b66c62abdfb4e82c969b3c2684d3
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -230,7 +230,7 @@ ScriptedImporter:
       y: 365
       width: 64
       height: 64
-    spriteID: b936c4c6534dcd64bb86c9d4aa93e4e7
+    spriteID: cf0ffb5547ea85c43812dab6f6f78818
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -250,7 +250,7 @@ ScriptedImporter:
       y: 437
       width: 64
       height: 64
-    spriteID: c48bdc307a71ee74f8188d09cade191d
+    spriteID: ba6cd602e59d87645ba314c8404bc0be
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -270,7 +270,7 @@ ScriptedImporter:
       y: 4
       width: 64
       height: 64
-    spriteID: bb138a1b4732a864aa227c4d928aa89d
+    spriteID: b5954255f6877654e89284137e67fe51
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -290,7 +290,7 @@ ScriptedImporter:
       y: 76
       width: 64
       height: 64
-    spriteID: 50ac88390c420754abba7b8c6e85acc4
+    spriteID: 150cb02a6c969dd4b96501d7f1afc4f1
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -310,7 +310,7 @@ ScriptedImporter:
       y: 148
       width: 64
       height: 64
-    spriteID: 2bab72e448ab2d54aacd0e079caaa472
+    spriteID: dc6bc55687f0ead46a0717c40233dd76
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -330,7 +330,7 @@ ScriptedImporter:
       y: 220
       width: 64
       height: 64
-    spriteID: 91b64e910b7a47044b62f226bf98f291
+    spriteID: 1fb2c5b860157d349998df3fa2a19f34
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -350,7 +350,7 @@ ScriptedImporter:
       y: 292
       width: 64
       height: 64
-    spriteID: 27d444547e08a2b44b715fada28b8e27
+    spriteID: 2c0a0f2cf7af3f84ca202fd216ad73da
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -370,7 +370,7 @@ ScriptedImporter:
       y: 364
       width: 64
       height: 64
-    spriteID: cb696c962dfc55b4fab4f0b351c28bff
+    spriteID: e876e69e2a533bb42ac5dc7f74b18095
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -395,7 +395,7 @@ ScriptedImporter:
         y: 0
         width: 64
         height: 64
-      spriteId: 82d28075d82769544936a68b3e30d19a
+      spriteId: be0b3ad2cc1453e469c715cc8a8ae849
     - name: Button Cooldown_Frame_1
       frameIndex: 1
       cellRect:
@@ -403,7 +403,7 @@ ScriptedImporter:
         y: -1
         width: 64
         height: 65
-      spriteId: 899254d51437eb04eb1bdc6a1c29a16c
+      spriteId: 377c17dee9fde554aa4191364770640b
     - name: Button Cooldown_Frame_2
       frameIndex: 2
       cellRect:
@@ -411,7 +411,7 @@ ScriptedImporter:
         y: 0
         width: 64
         height: 64
-      spriteId: 5598fb9924f97954fad8ccd4eb5543ae
+      spriteId: 97df1298e4bcbe846b468729647dfbe6
     - name: Button Cooldown_Frame_3
       frameIndex: 3
       cellRect:
@@ -419,7 +419,7 @@ ScriptedImporter:
         y: 0
         width: 64
         height: 64
-      spriteId: 679601b5ecba64646942b41ccc18b50c
+      spriteId: a98555ed313e12c49b603a555d6fc275
     - name: Button Cooldown_Frame_4
       frameIndex: 4
       cellRect:
@@ -427,7 +427,7 @@ ScriptedImporter:
         y: 0
         width: 64
         height: 64
-      spriteId: 3a33765618be97b4c9d77e8b7f80f0b1
+      spriteId: cd27b66c62abdfb4e82c969b3c2684d3
     - name: Button Cooldown_Frame_5
       frameIndex: 5
       cellRect:
@@ -435,7 +435,7 @@ ScriptedImporter:
         y: 0
         width: 64
         height: 64
-      spriteId: b936c4c6534dcd64bb86c9d4aa93e4e7
+      spriteId: cf0ffb5547ea85c43812dab6f6f78818
     - name: Button Cooldown_Frame_6
       frameIndex: 6
       cellRect:
@@ -443,7 +443,7 @@ ScriptedImporter:
         y: 0
         width: 64
         height: 64
-      spriteId: c48bdc307a71ee74f8188d09cade191d
+      spriteId: ba6cd602e59d87645ba314c8404bc0be
     - name: Button Cooldown_Frame_7
       frameIndex: 7
       cellRect:
@@ -451,7 +451,7 @@ ScriptedImporter:
         y: 0
         width: 64
         height: 64
-      spriteId: bb138a1b4732a864aa227c4d928aa89d
+      spriteId: b5954255f6877654e89284137e67fe51
     - name: Button Cooldown_Frame_8
       frameIndex: 8
       cellRect:
@@ -459,7 +459,7 @@ ScriptedImporter:
         y: 0
         width: 64
         height: 64
-      spriteId: 50ac88390c420754abba7b8c6e85acc4
+      spriteId: 150cb02a6c969dd4b96501d7f1afc4f1
     - name: Button Cooldown_Frame_9
       frameIndex: 9
       cellRect:
@@ -467,7 +467,7 @@ ScriptedImporter:
         y: 0
         width: 64
         height: 64
-      spriteId: 2bab72e448ab2d54aacd0e079caaa472
+      spriteId: dc6bc55687f0ead46a0717c40233dd76
     - name: Button Cooldown_Frame_10
       frameIndex: 10
       cellRect:
@@ -475,7 +475,7 @@ ScriptedImporter:
         y: 0
         width: 64
         height: 64
-      spriteId: 91b64e910b7a47044b62f226bf98f291
+      spriteId: 1fb2c5b860157d349998df3fa2a19f34
     - name: Button Cooldown_Frame_11
       frameIndex: 11
       cellRect:
@@ -483,7 +483,7 @@ ScriptedImporter:
         y: 0
         width: 64
         height: 64
-      spriteId: 27d444547e08a2b44b715fada28b8e27
+      spriteId: 2c0a0f2cf7af3f84ca202fd216ad73da
     - name: Button Cooldown_Frame_12
       frameIndex: 12
       cellRect:
@@ -491,7 +491,7 @@ ScriptedImporter:
         y: 0
         width: 64
         height: 64
-      spriteId: cb696c962dfc55b4fab4f0b351c28bff
+      spriteId: e876e69e2a533bb42ac5dc7f74b18095
     linkedCells: []
     parentIndex: -1
   platformSettings: []

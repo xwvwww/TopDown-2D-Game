@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D _rb;
     private Animator _animator;
+    private int _countCoin;
 
     private void Awake()
     {
@@ -28,13 +29,13 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
-        Vector3 direction = _input.MoveInput.x * transform.right + 
+        Vector3 direction = _input.MoveInput.x * transform.right +
                             _input.MoveInput.y * transform.up;
 
         if (direction.magnitude > 1f)
             direction.Normalize();
-        
-        _rb.velocity = new Vector2(direction.x,
+
+        _rb.velocity = new Vector2(direction.x, 
                                    direction.y) * 
                                    _moveSpeed;
 
@@ -45,8 +46,15 @@ public class PlayerController : MonoBehaviour
             _animator.SetFloat("VelocityX", direction.x);
             _animator.SetFloat("VelocityY", direction.y);
         }
-        
     }
 
-    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "Coin")
+        {
+            _countCoin++;
+            Destroy(collision.gameObject);
+        }
+    }
+
 }

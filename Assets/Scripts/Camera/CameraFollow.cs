@@ -7,8 +7,6 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] private Transform _target;
     [SerializeField] private float _smoothSpeed;
 
-    
-
     void Update()
     {
         if (_target == null)
