@@ -28,19 +28,15 @@ public class Inventory : MonoBehaviour
             if (container.IsBusy || container.Item?.ItemData.ItemType == item.ItemData.ItemType)
             {
                 container.CountItem += item.Amount;
-                TextMeshProUGUI amountText = container.transform.Find("Amount").GetComponent<TextMeshProUGUI>();
-                amountText.text = container.CountItem.ToString();
+                container.Text.text = container.CountItem.ToString();
                 break;
             }
             else if (!container.IsBusy)
             {
-                Image icon = container.transform.Find("Icon").GetComponent<Image>();
-                TextMeshProUGUI amountText = container.transform.Find("Amount").GetComponent<TextMeshProUGUI>();
-
-                icon.sprite = item.ItemData.Icon;
-                icon.color = new Color(255f, 255f, 255f, 255f);
+                container.IconItem.sprite = item.ItemData.Icon;
+                container.IconItem.color = new Color(255f, 255f, 255f, 255f);
                 container.CountItem = item.Amount;
-                amountText.text = container.CountItem.ToString();
+                container.CountItem.ToString();
 
                 container.Item = item;
                 container.IsBusy = true;
