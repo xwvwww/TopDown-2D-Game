@@ -1,13 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class ItemContainer : MonoBehaviour, IPointerClickHandler
 {
     private Item _item;
     private int _countItem;
     private bool _isBusy;
+    private TextMeshProUGUI _text;
+    private Image _iconItem;
 
     public Item Item
     {
@@ -27,6 +32,24 @@ public class ItemContainer : MonoBehaviour, IPointerClickHandler
         set { _countItem = value; }
     }
 
+    public TextMeshProUGUI Text
+    {
+        get { return _text; }
+        set { _text = value; }
+    }
+
+    public Image IconItem
+    {
+        get { return _iconItem; }
+        set { _iconItem = value; }
+    }
+
+    private void Awake()
+    {
+        _text = transform.Find("Amount").GetComponent<TextMeshProUGUI>();
+        _iconItem = transform.Find("Icon").GetComponent<Image>();
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
         if (_item != null)
@@ -35,11 +58,19 @@ public class ItemContainer : MonoBehaviour, IPointerClickHandler
             {
                 _item.Use();
                 _countItem--;
-            }
-            else
-            {
-                _isBusy = false;
-                _item = null;
+
+                _text.text = _countItem.ToString();
+
+
+                if (_countItem == 0)
+                {
+                    _text.text = "";
+                    _item = null;
+                    _isBusy = false;
+                    _iconItem.sprite = null;
+                    _iconItem.color = new Color(255f, 255f, 255f, 0f);
+                }
+                
             }
         }
     }
