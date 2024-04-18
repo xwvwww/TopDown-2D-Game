@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour
         if (item != null)
         {
             _inventory.AddItem(item);
+            item.Destroy();
         }
     }
 
