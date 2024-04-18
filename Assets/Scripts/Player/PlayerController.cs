@@ -14,12 +14,14 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D _rb;
     private Animator _animator;
+    private Inventory _inventory;
     private int _countCoin;
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        _inventory = GetComponent<Inventory>();
     }
 
     private void Update()
@@ -54,6 +56,13 @@ public class PlayerController : MonoBehaviour
         {
             _countCoin++;
             Destroy(collision.gameObject);
+            return;
+        }
+
+        Item item = collision.gameObject.GetComponent<Item>();
+        if (item != null)
+        {
+            _inventory.AddItem(item);
         }
     }
 
