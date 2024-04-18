@@ -14,7 +14,9 @@ public class Inventory : MonoBehaviour
         _containers = new List<ItemContainer>();
         for(int i = 0; i < _parent.childCount; i++)
         {
-            _containers.Add(_parent.GetChild(i).GetComponent<ItemContainer>());
+            ItemContainer container = _parent.GetChild(i).GetComponent<ItemContainer>();
+            container.Init();
+            _containers.Add(container);
         }
     }
 

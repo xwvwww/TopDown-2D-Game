@@ -44,12 +44,6 @@ public class ItemContainer : MonoBehaviour, IPointerClickHandler
         set { _iconItem = value; }
     }
 
-    private void Awake()
-    {
-        _text = transform.Find("Amount").GetComponent<TextMeshProUGUI>();
-        _iconItem = transform.Find("Icon").GetComponent<Image>();
-    }
-
     public void OnPointerClick(PointerEventData eventData)
     {
         if (_item != null)
@@ -73,5 +67,10 @@ public class ItemContainer : MonoBehaviour, IPointerClickHandler
                 
             }
         }
+    }
+    public void Init()
+    {
+        _text = transform.Find("Amount").GetComponent<TextMeshProUGUI>();
+        _iconItem = transform.Find("Icon").GetComponent<Image>();
     }
 }
