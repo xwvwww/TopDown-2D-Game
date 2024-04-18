@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class ItemContainer : MonoBehaviour, IPointerClickHandler
 {
     private Item _item;
+    private int _countItem;
     private bool _isBusy;
 
     public Item Item
@@ -20,11 +21,26 @@ public class ItemContainer : MonoBehaviour, IPointerClickHandler
         set { _isBusy = value; }
     }
 
+    public int CountItem
+    {
+        get { return _countItem; }
+        set { _countItem = value; }
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
         if (_item != null)
         {
-            _item.Use();
+            if (_countItem > 0)
+            {
+                _item.Use();
+                _countItem--;
+            }
+            else
+            {
+                _isBusy = false;
+                _item = null;
+            }
         }
     }
 }

@@ -27,9 +27,9 @@ public class Inventory : MonoBehaviour
         {
             if (container.IsBusy || container.Item?.ItemData.ItemType == item.ItemData.ItemType)
             {
-                container.Item.Amount++;
+                container.CountItem += item.Amount;
                 TextMeshProUGUI amountText = container.transform.Find("Amount").GetComponent<TextMeshProUGUI>();
-                amountText.text = container.Item.Amount.ToString();
+                amountText.text = container.CountItem.ToString();
                 break;
             }
             else if (!container.IsBusy)
@@ -39,7 +39,8 @@ public class Inventory : MonoBehaviour
 
                 icon.sprite = item.ItemData.Icon;
                 icon.color = new Color(255f, 255f, 255f, 255f);
-                amountText.text = item.Amount.ToString();
+                container.CountItem = item.Amount;
+                amountText.text = container.CountItem.ToString();
 
                 container.Item = item;
                 container.IsBusy = true;
