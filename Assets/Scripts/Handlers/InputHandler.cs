@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class InputHandler : MonoBehaviour
@@ -9,6 +10,7 @@ public class InputHandler : MonoBehaviour
     private PlayerInput _playerInput;
 
     public Vector2 MoveInput { get; private set; }
+    public bool InventoryPress { get; private set; }
 
     private void Awake()
     {
@@ -22,6 +24,14 @@ public class InputHandler : MonoBehaviour
 
         _playerInput.Player.Move.performed += OnMove;
         _playerInput.Player.Move.canceled += OnMove;
+
+        _playerInput.Player.Inventory.performed += OnInventory;
+        _playerInput.Player.Inventory.canceled += OnInventory;
+    }
+
+    private void OnInventory(InputAction.CallbackContext context)
+    {
+        InventoryPress = context.ReadValueAsButton();
     }
 
     private void OnMove(InputAction.CallbackContext context)

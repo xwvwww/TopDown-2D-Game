@@ -19,12 +19,11 @@ public class Item : MonoBehaviour
 
     public virtual void Use()
     {
-
+        Debug.Log(ItemData.Name);
     }
 
     public void Destroy()
     {
-        // Destroy(gameObject);
 
         gameObject.SetActive(false);
     }
