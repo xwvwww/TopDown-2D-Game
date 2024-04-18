@@ -25,7 +25,14 @@ public class Inventory : MonoBehaviour
 
         foreach (ItemContainer container in _containers)
         {
-            if (!container.IsBusy)
+            if (container.IsBusy || container.Item?.ItemData.ItemType == item.ItemData.ItemType)
+            {
+                container.Item.Amount++;
+                TextMeshProUGUI amountText = container.transform.Find("Amount").GetComponent<TextMeshProUGUI>();
+                amountText.text = container.Item.Amount.ToString();
+                break;
+            }
+            else if (!container.IsBusy)
             {
                 Image icon = container.transform.Find("Icon").GetComponent<Image>();
                 TextMeshProUGUI amountText = container.transform.Find("Amount").GetComponent<TextMeshProUGUI>();
