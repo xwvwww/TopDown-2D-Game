@@ -20,4 +20,6 @@ public class PickupItem : MonoBehaviour
             item.Destroy();
         }
     }
+
+
 }
