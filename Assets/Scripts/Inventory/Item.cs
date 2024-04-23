@@ -17,9 +17,9 @@ public class Item : MonoBehaviour
         set { _amount = value; }
     }
 
-    public virtual void Use()
+    public virtual bool Use()
     {
-        Debug.Log(ItemData.Name);
+        return true;
     }
 
     public void Destroy()

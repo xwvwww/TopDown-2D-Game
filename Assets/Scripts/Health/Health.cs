@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
     protected int _currentHealth;
 
     public int MaxHealth => _health;
+    public int CurrentHealth => _currentHealth;
 
     private void Start()
     {
