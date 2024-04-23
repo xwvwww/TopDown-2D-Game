@@ -46,6 +46,11 @@ public class ItemContainer : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        UseItem();
+    }
+
+    public void UseItem()
+    {
         if (_item != null)
         {
             if (_countItem > 0)
@@ -65,10 +70,11 @@ public class ItemContainer : MonoBehaviour, IPointerClickHandler
                         _iconItem.color = new Color(255f, 255f, 255f, 0f);
                     }
                 }
-                
+
             }
         }
     }
+
     public void Init()
     {
         _text = transform.Find("Amount").GetComponent<TextMeshProUGUI>();

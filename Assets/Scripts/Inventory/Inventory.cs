@@ -49,7 +49,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    internal Item GetItem(ItemType itemType)
+    internal ItemContainer GetItem(ItemType itemType)
     {
         foreach (ItemContainer container in _containers)
         {
@@ -57,7 +57,7 @@ public class Inventory : MonoBehaviour
             {
                 if (container.Item.ItemData.ItemType == itemType)
                 {
-                    return container.Item;
+                    return container;
                 }
             }
         }
