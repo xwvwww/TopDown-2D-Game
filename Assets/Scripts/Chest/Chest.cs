@@ -14,6 +14,15 @@ public class Chest : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
+    public void ActiveChest(KeyItem key)
+    {
+        if (key != null)
+        {
+            _isOpen = true;
+            _animator.SetTrigger("IsOpen");
+        }
+    }
+
     private void OpenChest()
     {
         int count = 0;
@@ -33,15 +42,7 @@ public class Chest : MonoBehaviour
         return Random.Range(0, _itemPrefabs.Count);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
-        if (playerController != null && !_isOpen)
-        {
-            _animator.SetTrigger("IsOpen");
-            _isOpen = true;
-        }
-    }
+    
 
    
 }

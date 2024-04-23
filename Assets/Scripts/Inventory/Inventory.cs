@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class Inventory : MonoBehaviour
 {
@@ -46,5 +47,21 @@ public class Inventory : MonoBehaviour
                 break;
             }
         }
+    }
+
+    internal Item GetItem(ItemType itemType)
+    {
+        foreach (ItemContainer container in _containers)
+        {
+            if (container.IsBusy)
+            {
+                if (container.Item.ItemData.ItemType == itemType)
+                {
+                    return container.Item;
+                }
+            }
+        }
+
+        return null;
     }
 }

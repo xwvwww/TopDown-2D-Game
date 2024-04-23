@@ -3925,6 +3925,7 @@ MonoBehaviour:
   _interactLayer:
     serializedVersion: 2
     m_Bits: 64
+  _inputHandler: {fileID: 15439539}
 --- !u!1 &837557377
 GameObject:
   m_ObjectHideFlags: 0
@@ -7149,7 +7150,7 @@ GameObject:
   - component: {fileID: 1595387018}
   m_Layer: 6
   m_Name: Trigger
-  m_TagString: Untagged
+  m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22135,7 +22136,7 @@ GameObject:
   - component: {fileID: 1972797914}
   m_Layer: 6
   m_Name: Chest
-  m_TagString: Untagged
+  m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
