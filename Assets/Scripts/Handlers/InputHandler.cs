@@ -10,6 +10,7 @@ public class InputHandler : MonoBehaviour
     private PlayerInput _playerInput;
 
     public Vector2 MoveInput { get; private set; }
+    public bool Interact { get; private set; }
     public bool InventoryPress { get; private set; }
 
     private void Awake()

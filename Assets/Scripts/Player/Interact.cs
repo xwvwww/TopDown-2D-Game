@@ -6,12 +6,18 @@ public class Interact : MonoBehaviour
 {
     [SerializeField] private LayerMask _interactLayer;
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
+    private Collider2D _collider;
 
-        if (collision.IsTouchingLayers(_interactLayer))
+    private void Awake()
+    {
+        _collider = GetComponent<Collider2D>();
+    }
+
+    private void Update()
+    {
+        if (_collider.IsTouchingLayers(_interactLayer))
         {
-            print(collision.name);
+            
         }
     }
 }
