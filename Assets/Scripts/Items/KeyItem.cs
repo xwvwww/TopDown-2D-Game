@@ -6,6 +6,6 @@ public class KeyItem : Item
 {
     public override bool Use()
     {
-        
+        return true;
     }
 }

@@ -50,19 +50,20 @@ public class ItemContainer : MonoBehaviour, IPointerClickHandler
         {
             if (_countItem > 0)
             {
-                _item.Use();
-                _countItem--;
-
-                _text.text = _countItem.ToString();
-
-
-                if (_countItem == 0)
+                if (_item.Use())
                 {
-                    _text.text = "";
-                    _item = null;
-                    _isBusy = false;
-                    _iconItem.sprite = null;
-                    _iconItem.color = new Color(255f, 255f, 255f, 0f);
+                    _countItem--;
+
+                    _text.text = _countItem.ToString();
+
+                    if (_countItem == 0)
+                    {
+                        _text.text = "";
+                        _item = null;
+                        _isBusy = false;
+                        _iconItem.sprite = null;
+                        _iconItem.color = new Color(255f, 255f, 255f, 0f);
+                    }
                 }
                 
             }
