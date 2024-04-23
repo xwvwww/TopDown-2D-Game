@@ -50,21 +50,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.transform.tag == "Coin")
-        {
-            _countCoin++;
-            Destroy(collision.gameObject);
-            return;
-        }
-
-        Item item = collision.gameObject.GetComponent<Item>();
-        if (item != null)
-        {
-            _inventory.AddItem(item);
-            item.Destroy();
-        }
-    }
+    
 
 }

@@ -30,5 +30,6 @@ public class ItemData : ScriptableObject
 
 public enum ItemType
 {
-    Health
+    Health,
+    Key
 }
