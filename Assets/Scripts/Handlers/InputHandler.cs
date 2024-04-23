@@ -10,7 +10,7 @@ public class InputHandler : MonoBehaviour
     private PlayerInput _playerInput;
 
     public Vector2 MoveInput { get; private set; }
-    public bool Interact { get; private set; }
+    public bool InteractPress { get; private set; }
     public bool InventoryPress { get; private set; }
 
     private void Awake()
@@ -28,6 +28,14 @@ public class InputHandler : MonoBehaviour
 
         _playerInput.Player.Inventory.performed += OnInventory;
         _playerInput.Player.Inventory.canceled += OnInventory;
+
+        _playerInput.Player.Interact.started += OnInteract;
+        _playerInput.Player.Interact.canceled += OnInteract;
+    }
+
+    private void OnInteract(InputAction.CallbackContext context)
+    {
+        InteractPress = context.ReadValueAsButton();
     }
 
     private void OnInventory(InputAction.CallbackContext context)
