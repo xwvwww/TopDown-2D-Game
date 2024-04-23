@@ -27,7 +27,7 @@ public class Inventory : MonoBehaviour
 
         foreach (ItemContainer container in _containers)
         {
-            if (container.IsBusy || container.Item?.ItemData.ItemType == item.ItemData.ItemType)
+            if (container.IsBusy && container.Item?.ItemData.ItemType == item.ItemData.ItemType)
             {
                 container.CountItem += item.Amount;
                 container.Text.text = container.CountItem.ToString();
@@ -38,7 +38,7 @@ public class Inventory : MonoBehaviour
                 container.IconItem.sprite = item.ItemData.Icon;
                 container.IconItem.color = new Color(255f, 255f, 255f, 255f);
                 container.CountItem = item.Amount;
-                container.CountItem.ToString();
+                container.Text.text = container.CountItem.ToString();
 
                 container.Item = item;
                 container.IsBusy = true;
