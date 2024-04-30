@@ -13,6 +13,7 @@ public class InputHandler : MonoBehaviour
     public Vector2 CursorPosition { get; private set; }
     public UnityAction InventoryPress { get; set; }
     public UnityAction InteractPress { get; set; }
+    public bool ShootPress { get; private set; }
 
     private void Awake()
     {
@@ -32,6 +33,14 @@ public class InputHandler : MonoBehaviour
         _playerInput.Player.Interact.started += OnInteract;
 
         _playerInput.Player.CursorPosition.performed += OnCursorPosition;
+
+        _playerInput.Player.Shoot.performed += OnShoot;
+        _playerInput.Player.Shoot.canceled += OnShoot;
+    }
+
+    private void OnShoot(InputAction.CallbackContext context)
+    {
+        ShootPress = context.ReadValueAsButton();
     }
 
     private void OnCursorPosition(InputAction.CallbackContext context)
