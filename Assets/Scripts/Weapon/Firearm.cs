@@ -36,11 +36,12 @@ public class Firearm : Weapon
     {
         Aim();
         Attack();
+        Reload();
     }
 
     public override void Attack()
     {
-        if (_inputHandler.ShootPress && _currentClipSize > 0)
+        if (_inputHandler.ShootPress && _currentClipSize > 0 && !_isReloading)
         {
             if ((Time.time - _shootLastTime) < _attackDelay)
                 return;
@@ -52,7 +53,8 @@ public class Firearm : Weapon
                                             _shootPoint.position, 
                                             Quaternion.identity);
 
-            bullet.GetComponent<Rigidbody2D>().velocity = _aimDirection * _bulletSpeed;
+            bullet.GetComponent<Rigidbody2D>().AddForce(_aimDirection * _bulletSpeed, 
+                                                        ForceMode2D.Impulse);
         }
     }
 
@@ -67,8 +69,11 @@ public class Firearm : Weapon
 
     private void Reload()
     {
-        _isReloading = true;
-        StartCoroutine(ReloadingDelay());
+        if (_inputHandler.ReloadPress && !_isReloading && _currentClipSize < _clipSize)
+        {
+            _isReloading = true;
+            StartCoroutine(ReloadingDelay());
+        }
     }
 
     private IEnumerator ReloadingDelay()

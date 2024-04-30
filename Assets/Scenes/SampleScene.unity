@@ -19156,6 +19156,7 @@ MonoBehaviour:
   _damage: 30
   _clipSize: 30
   _bulletSpeed: 30
+  _reloadingTime: 1
   _inputHandler: {fileID: 15439539}
   _weaponHolder: {fileID: 1294699716}
   _bulletPrefab: {fileID: 7637430686343531751, guid: 91d2aa4be14590048bc3891bd84509a3, type: 3}
