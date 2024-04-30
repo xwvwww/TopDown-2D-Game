@@ -1,10 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
 
 public class ItemContainer : MonoBehaviour, IPointerClickHandler
 {
@@ -68,13 +67,13 @@ public class ItemContainer : MonoBehaviour, IPointerClickHandler
                         _isBusy = false;
                         _iconItem.sprite = null;
                         _iconItem.color = new Color(255f, 255f, 255f, 0f);
+
                     }
                 }
-
             }
+
         }
     }
-
     public void Init()
     {
         _text = transform.Find("Amount").GetComponent<TextMeshProUGUI>();

@@ -19,6 +19,11 @@ public class PickupItem : MonoBehaviour
             _inventory.AddItem(item);
             item.Destroy();
         }
+
+        if (collision.gameObject.tag == "Coin")
+        {
+
+        }
     }
 
 

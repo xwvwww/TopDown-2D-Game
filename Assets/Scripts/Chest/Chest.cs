@@ -9,6 +9,8 @@ public class Chest : MonoBehaviour
     private Animator _animator;
     private bool _isOpen;
 
+    public bool IsOpen => _isOpen;
+
     private void Awake()
     {
         _animator = GetComponent<Animator>();
@@ -16,7 +18,7 @@ public class Chest : MonoBehaviour
 
     public void ActiveChest(KeyItem key)
     {
-        if (key != null)
+        if  (key != null)
         {
             _isOpen = true;
             _animator.SetTrigger("IsOpen");
@@ -41,8 +43,4 @@ public class Chest : MonoBehaviour
     {
         return Random.Range(0, _itemPrefabs.Count);
     }
-
-    
-
-   
 }

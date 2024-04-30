@@ -17,6 +17,7 @@ public class Inventory : MonoBehaviour
         {
             ItemContainer container = _parent.GetChild(i).GetComponent<ItemContainer>();
             container.Init();
+
             _containers.Add(container);
         }
     }
@@ -46,12 +47,13 @@ public class Inventory : MonoBehaviour
 
                 break;
             }
+           
         }
     }
 
     internal ItemContainer GetItem(ItemType itemType)
     {
-        foreach (ItemContainer container in _containers)
+        foreach(ItemContainer container in _containers)
         {
             if (container.IsBusy)
             {

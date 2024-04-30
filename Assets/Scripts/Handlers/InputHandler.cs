@@ -10,8 +10,9 @@ public class InputHandler : MonoBehaviour
     private PlayerInput _playerInput;
 
     public Vector2 MoveInput { get; private set; }
+    public Vector2 CursorPosition { get; private set; }
+    public UnityAction InventoryPress { get; set; }
     public UnityAction InteractPress { get; set; }
-    public bool InventoryPress { get; set; }
 
     private void Awake()
     {
@@ -26,10 +27,16 @@ public class InputHandler : MonoBehaviour
         _playerInput.Player.Move.performed += OnMove;
         _playerInput.Player.Move.canceled += OnMove;
 
-        _playerInput.Player.Inventory.performed += OnInventory;
-        _playerInput.Player.Inventory.canceled += OnInventory;
+        _playerInput.Player.Inventory.started += OnInventory;
 
         _playerInput.Player.Interact.started += OnInteract;
+
+        _playerInput.Player.CursorPosition.performed += OnCursorPosition;
+    }
+
+    private void OnCursorPosition(InputAction.CallbackContext context)
+    {
+        CursorPosition = context.ReadValue<Vector2>();
     }
 
     private void OnInteract(InputAction.CallbackContext context)
@@ -39,7 +46,7 @@ public class InputHandler : MonoBehaviour
 
     private void OnInventory(InputAction.CallbackContext context)
     {
-        InventoryPress = context.ReadValueAsButton();
+        InventoryPress?.Invoke();
     }
 
     private void OnMove(InputAction.CallbackContext context)

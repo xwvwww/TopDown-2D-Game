@@ -6,13 +6,12 @@ public class HealthItem : Item
 {
     public override bool Use()
     {
-        PlayerHealth playerhealth = FindObjectOfType<PlayerHealth>();
-        
-        if (playerhealth != null)
+        PlayerHealth playerHealth = FindObjectOfType<PlayerHealth>();
+        if (playerHealth != null)
         {
-            if (playerhealth.CurrentHealth < playerhealth.MaxHealth)
+            if (playerHealth.CurrentHealth < playerHealth.MaxHealth)
             {
-                playerhealth.AddHealth(20);
+                playerHealth.AddHealth(20);
                 return true;
             }
 
