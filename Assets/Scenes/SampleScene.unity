@@ -1251,6 +1251,7 @@ GameObject:
   - component: {fileID: 348126091}
   - component: {fileID: 348126094}
   - component: {fileID: 348126093}
+  - component: {fileID: 348126095}
   m_Layer: 0
   m_Name: Rabbit
   m_TagString: Untagged
@@ -1380,7 +1381,7 @@ MonoBehaviour:
   - {fileID: 109471568}
   - {fileID: 2034746845}
   _minimumIdleTime: 1
-  _maximumIdleTime: 8
+  _maximumIdleTime: 3
 --- !u!195 &348126094
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1403,6 +1404,26 @@ NavMeshAgent:
   m_BaseOffset: 0.265625
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!95 &348126095
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348126088}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7f72d3609ad5c2c42865559239e9925e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &354966910
 GameObject:
   m_ObjectHideFlags: 0

@@ -39,6 +39,7 @@ public class Rabbit : MonoBehaviour
                 return;
 
             _idleTime = Random.Range(_minimumIdleTime, _maximumIdleTime);
+            _agent.speed = 3.5f;
             _state = RabbitState.Walk;
         }
         
@@ -47,6 +48,7 @@ public class Rabbit : MonoBehaviour
             if (Vector3.Distance(transform.position, _currentWaypoint.position) < 2f)
             {
                 _currentWaypoint = GetRandomPoint();
+                _agent.speed = 0.00001f;
                 _state = RabbitState.Idle;
             }
 
