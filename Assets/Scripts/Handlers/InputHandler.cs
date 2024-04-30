@@ -14,6 +14,7 @@ public class InputHandler : MonoBehaviour
     public UnityAction InventoryPress { get; set; }
     public UnityAction InteractPress { get; set; }
     public bool ShootPress { get; private set; }
+    public bool ReloadPress { get; private set; }
 
     private void Awake()
     {
@@ -36,6 +37,15 @@ public class InputHandler : MonoBehaviour
 
         _playerInput.Player.Shoot.performed += OnShoot;
         _playerInput.Player.Shoot.canceled += OnShoot;
+
+        _playerInput.Player.Reload.started += OnReload;
+        _playerInput.Player.Reload.canceled += OnReload;
+
+    }
+
+    private void OnReload(InputAction.CallbackContext context)
+    {
+        ReloadPress = context.ReadValueAsButton();
     }
 
     private void OnShoot(InputAction.CallbackContext context)
